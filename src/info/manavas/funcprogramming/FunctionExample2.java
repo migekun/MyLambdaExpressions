@@ -25,5 +25,26 @@ public class FunctionExample2 {
         });
 
         System.out.println(mapFunction.apply(Instructors.getAll()));
+
+        System.out.println("--------------- Test andThen VS compose");
+
+        Function<Double, Double> half = (a) -> a / 2;
+        Function<Double, Double> twice = (a) -> a * a;
+
+        Function<Double, Double> squareAndThenCube = half.andThen(twice);
+        Double result = squareAndThenCube.apply(3d);
+        System.out.println(result);
+
+        Function<Double, Double> squareComposeCube = half.compose(twice);
+        result = squareComposeCube.apply(3d);
+        System.out.println(result);
+
+        Function<Double, Double> cubeAndThenSquare = twice.andThen(half);
+        result = cubeAndThenSquare.apply(3d);
+        System.out.println(result);
+
+        Function<Double, Double> cubeComposeSquare = twice.compose(half);
+        result = cubeComposeSquare.apply(3d);
+        System.out.println(result);
     }
 }
