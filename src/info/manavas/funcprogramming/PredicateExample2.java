@@ -9,6 +9,7 @@ public class PredicateExample2 {
         //all instructor who teaches online
 
         Predicate<Instructor> p1 = (instructor) -> instructor.isOnlineCourse();
+        Predicate<Instructor> p1_2 = Instructor::isOnlineCourse;
         Predicate<Instructor> p2 = (instructor) -> instructor.getYearsOfExperience() > 10;
         List<Instructor> instructorList = Instructors.getAll();
         instructorList.forEach(instructor -> {
