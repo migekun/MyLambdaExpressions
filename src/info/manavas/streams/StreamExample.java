@@ -24,5 +24,11 @@ public class StreamExample {
                 .collect(Collectors.toMap(Instructor::getName, Instructor::getCourses));
 
         System.out.println(map);
+
+        Map<String, List<String>> map2 = list.stream()
+                .filter(p2)
+                .collect(Collectors.toMap(Instructor::getName, Instructor::getCourses));
+
+        System.out.println(map2);
     }
 }
