@@ -19,16 +19,20 @@ public class StreamExample {
         List<Instructor> list = Instructors.getAll();
 
         Map<String, List<String>> map = list.stream()
+//                .peek(s-> System.out.println(s))
                 .filter(p1)
+//                .peek(s-> System.out.println(s))
                 .filter(p2)
+                .peek(s-> System.out.println(s))
                 .collect(Collectors.toMap(Instructor::getName, Instructor::getCourses));
+//peek es una operación intermedia que nos da el estado del stream en el punto en el que lo llamamos
 
-        System.out.println(map);
-
-        Map<String, List<String>> map2 = list.stream()
-                .filter(p2)
-                .collect(Collectors.toMap(Instructor::getName, Instructor::getCourses));
-
-        System.out.println(map2);
+//        System.out.println(map);
+//
+//        Map<String, List<String>> map2 = list.stream()
+//                .filter(p2)
+//                .collect(Collectors.toMap(Instructor::getName, Instructor::getCourses));
+//
+//        System.out.println(map2);
     }
 }
