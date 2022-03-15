@@ -15,10 +15,10 @@ public class JoiningStreamExample {
         result = Stream.of("E","F", "G", "H").collect(Collectors.joining(",", "{","}"));
         System.out.println("result3 = " + result);
 
-        //instructors names separated by ' and prefix { and suffix }
+        //instructors names separated by , and prefix { and suffix }
         String namesConcatenated = Instructors.getAll().stream()
                 .map(Instructor::getName)
-                .collect(Collectors.joining(",", "{", "}"));
+                .collect(Collectors.joining(", ", "{", "}"));
         System.out.println("namesConcatenated = " + namesConcatenated);
     }
 }
