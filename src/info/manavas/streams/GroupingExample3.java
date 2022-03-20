@@ -25,8 +25,6 @@ public class GroupingExample3 {
                                 instructor.getYearsOfExperience()>10 ? "Senior":"Junior",
                         LinkedHashMap::new,
                         Collectors.filtering(Instructor::isOnlineCourse, Collectors.toList())));
-        instructorsByExperienceOnline.forEach((key, value) ->{
-            System.out.println("key = " + key + " value = " + value);
-        });
+        instructorsByExperienceOnline.forEach((key, value) -> System.out.println("key = " + key + " value = " + value));
     }
 }
