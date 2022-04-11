@@ -1,4 +1,4 @@
-package info.manavas.java10improvements;
+package info.manavas.javaImprovements;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
