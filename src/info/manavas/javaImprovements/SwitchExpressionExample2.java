@@ -5,8 +5,8 @@ public class SwitchExpressionExample2 {
         String month = "JANUARY";
         switch (month) {
             case "JANUARY", "FEBRUARY", "MARCH" -> System.out.println("FIRST QUARTER");
-            case "APRIL", "MAY", "JUNY" -> System.out.println("SECOND QUARTER");
-            case "JULY", "AUGUST", "SETEMBER" -> System.out.println("THIRD QUARTER");
+            case "APRIL", "MAY", "JUNE" -> System.out.println("SECOND QUARTER");
+            case "JULY", "AUGUST", "SEPTEMBER" -> System.out.println("THIRD QUARTER");
             case "OCTOBER", "NOVEMBER", "DECEMBER" -> System.out.println("FOURTH QUARTER");
             default -> System.out.println("UNKNOWN QUARTER");
 
